@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style-html.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Start Header -->
+  <div class="header" id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="css.html" class="logo-css" target="_blank">
+          CSS
+        </a>
+        <a href="#">
+          <pre class="et"> et</pre>
+        </a>
+        <a href="index.html" class="logo-html">
+          <pre class="html"> HTML</pre>
+        </a>
+      </div>
+      <ul class="main-nav">
+        <li><a href="#html-page">Création de fichier HTML</a></li>
+        <li><a href="#structure">Structure d'un page html</a></li>
+        <li><a href="#balise">Les balise</a></li>
+        <li>
+          <a href="#">Other Links</a>
+          <!-- Start Megamenu -->
+          <div class="mega-menu">
+            <ul class="links">
+              <li>
+                <a href="#balise-pre"><i class="fas fa-hashtag"></i> Balise de premier niveau</a>
+              </li>
+              <li>
+                <a href="#balise-tete"><i class="fas fa-head-side-virus"></i> Balise d'en-tête</a>
+              </li>
+              <li>
+                <a href="#balise-arch"><i class="fas fa-layer-group"></i></i> Balise d'architecture</a>
+              </li>
+              <li>
+                <a href="#balise-mise"><i class="fas fa-remove-format"></i> Balise de mise en forme</a>
+              </li>
+            </ul>
+            <ul class="links">
+              <li>
+                <a href="#balise-list"><i class="fas fa-table"></i> Balise de liste et tableau</a>
+              </li>
+              <li>
+                <a href="#balise-form"><i class="fas fa-photo-video"></i> Balise de media et formulaire</a>
+              </li>
+              <li>
+                <a href="#input-type"><i class="fas fa-edit"></i> Input type</a>
+              </li>
+              <li>
+                <a href="#atrributs"><i class="fas fa-tools"></i> Les attributs</a>
+              </li>
+            </ul>
+
+          </div>
+          <!-- End Megamenu -->
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Header -->
+  <!-- Start Landing -->
+  <div class="landing">
+    <div class="container">
+      <div class="text">
+        <h1>C'est Quoi HTML?</h1>
+        <p>(<span class="start">H</span>yper <span class="start">T</span>ext <span class="start">M</span>arkup <span
+            class="start">L</span>anguage)
+          C'est un language qui permet de décrire tout ce qui s'affiche dans l'écran de ton navigateur.</p>
+      </div>
+      <div class="image">
+        <img src="imgs/html.png" alt="" />
+      </div>
+    </div>
+    <a href="#html-page" class="go-down">
+      <i class="fas fa-angle-double-down fa-2x"></i>
+    </a>
+  </div>
+  <!-- End Landing -->
+  <!-- Start html-page -->
+  <div class="html-page" id="html-page">
+    <h2 class="main-title">Création de fichier HTML</h2>
+    <div class="container">
+      <div class="desc">HTML fichier pour le créer un simple éditeur de texte est suffisant mais si tu utilises un
+        éditeur avancé comme VsCode
+        reste mieux pour que tu profiteras de la coloration syntaxique et aidra beaucoup avec les grand fichiers.
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>tag</span> <span class="attr-name">attribut</span><span class="attr-value"><span class="punctuation">=</span><span class="punctuation">"</span>valeur<span class="punctuation">"&gt;</span></span></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End html-page -->
+  <!-- Start structure -->
+  <div class="structure" id="structure">
+    <h2 class="main-title">Structure d'un page html</h2>
+    <div class="container">
+      <div class="desc">le premiére ligne dans le fichier HTML sera toujours une balise unique indiquant que notre
+        fichier et de type HTML
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="tag"><span class="punctuation">&lt;!</span>DOCTYPE</span> <span class="attr-name">html</span><span class="punctuation">&gt;</span></span></code></pre>
+        </div>
+        puis notre document sera encadrer par les balises html
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>html<span class="punctuation">&gt;</span></span><span class="tag"><span class="punctuation">...&lt;/</span>html<span class="punctuation">&gt;</span></span></code></pre>
+        </div>
+        à l'intérieur on trouvera alors un en-téte et un corps de fichier. l'en-téte est encadrés par la balise head
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>head<span class="punctuation">&gt;</span></span><span class="tag"><span class="punctuation">...&lt;/</span>head<span class="punctuation">&gt;</span></span></code></pre>
+        </div>
+        et le corps par la balise body
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>body<span class="punctuation">&gt;</span></span><span class="tag"><span class="punctuation">...&lt;/</span>body<span class="punctuation">&gt;</span></span></code></pre>
+        </div>dans l'en-téte on trouve toutes les métadonnées de notre site comme <a href="#html-title">le titre</a> par
+        exemple. dans le corps
+        c'est là ou nous allons écrire tous le contenu de notre page web, pour cela on dispose nombreuse balises
+      </div>
+    </div>
+  </div>
+  <!-- End structure -->
+  <!-- Start balise -->
+  <div class="balise" id="balise">
+    <h2 class="main-title">Les balise</h2>
+    <div class="container">
+      <div class="desc">Une balise est un mot clé entourée des signe &lt; et &gt; quand on veut ajouter une information
+        dans une page HTML on l'encadre entre une balise ouvrante et une balise fermente, par exemple:
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>p<span class="punctuation">&gt;</span></span><span class="tag"><span class="punctuation"> informations &lt;/</span>p<span class="punctuation">&gt;</span></span></code></pre>
+        </div>
+        Parfois une balise pourra comporter des attributs sous la forme de clé valeur, par exemple:
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="puntuation">&lt;</span>a <span class="attr-name">href</span><span class="punctuation">="</span><span class="attr-value">www.google.com</span><span class="punctuation">&gt;</span></span><span class="tag"><span class="punctuation">&lt;</span>a<span class="punctuation">&gt;</span></span></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End balise -->
+  <!-- Start balise-pre -->
+  <div class="balise-pre" id="balise-pre">
+    <h2 class="main-title">Balise De premier niveau</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Balise</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element" id="html-html">&lt;html&gt;</td>
+                <td class="desc-el">Indiquez au navigateur que le document est en HTML</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-body">&lt;body&gt;</td>
+                <td class="desc-el">corps de la page</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-head">&lt;head&gt;</td>
+                <td class="desc-el">En-tête de la page</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End balise-pre -->
+  <!-- Start balise-tete -->
+  <div class="balise-tete" id="balise-tete">
+    <h2 class="main-title">Balise d'en-tête</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Balise</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element" id="html-title">&lt;title&gt;</td>
+                <td class="desc-el">Titre de la page. trés important pour le référencement.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-script">&lt;script&gt;</td>
+                <td class="desc-el">Insere Script.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-style">&lt;style&gt;</td>
+                <td class="desc-el">Insere Css Style.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-noscript">&lt;noscript&gt;</td>
+                <td class="desc-el">Message à afficher si le script n'est pas toloré.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-base">&lt;base/&gt;</td>
+                <td class="desc-el">Url Par défaut.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-link">&lt;link/&gt;</td>
+                <td class="desc-el">Ajouter css fichier.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-meta">&lt;meta/&gt;</td>
+                <td class="desc-el">Ajouter des métadonnées: title, description, charset.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End balise-tete -->
+  <!-- Start balise-arch -->
+  <div class="balise-arch" id="balise-arch">
+    <h2 class="main-title">Balise d'architecture</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Balise</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element" id="html-header">&lt;header&gt;</td>
+                <td class="desc-el">Définit l'en-tête d'une section ou d'une page.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-footer">&lt;footer&gt;</td>
+                <td class="desc-el">Définit le base d'une section ou d'une page.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-details">&lt;details&gt;</td>
+                <td class="desc-el">Définit les details d'un élément.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-summary">&lt;summary&gt;</td>
+                <td class="desc-el">Définit l'en-tête des details d'un élément.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-section">&lt;section&gt;</td>
+                <td class="desc-el">Définit une section.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-article">&lt;article&gt;</td>
+                <td class="desc-el">Définit un article.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-aside">&lt;aside&gt;</td>
+                <td class="desc-el">Définit un élément latéral.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-nav">&lt;nav&gt;</td>
+                <td class="desc-el">Définit un groupe de liens de navigations.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-iframe">&lt;iframe&gt;</td>
+                <td class="desc-el">Introduis une page html dans une frame.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-div">&lt;div&gt;</td>
+                <td class="desc-el">Claque ou section.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-p">&lt;p&gt;</td>
+                <td class="desc-el">Paragraph</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-span">&lt;span&gt;</td>
+                <td class="desc-el">Section de type inline.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-a">&lt;a&gt;</td>
+                <td class="desc-el">Lien</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End balise-arch -->
+  <!-- Start balise-mise -->
+  <div class="balise-mise" id="balise-mise">
+    <h2 class="main-title">Balise de mise en forme</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Balise</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element" id="html-h1">&lt;h1&gt; à &lt;h6&gt;</td>
+                <td class="desc-el">Créér un titre.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-b">&lt;b&gt;</td>
+                <td class="desc-el">Text en <b>gras</b>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-strong">&lt;strong&gt;</td>
+                <td class="desc-el">mise en <strong>exergue</strong>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-i">&lt;i&gt;</td>
+                <td class="desc-el">Texte en <i>italique.</i></td>
+              </tr>
+              <tr>
+                <td class="element" id="html-em">&lt;em&gt;</td>
+                <td class="desc-el">Italique en <em>exergue</em>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-s">&lt;s&gt;</td>
+                <td class="desc-el">Texte n'est pas <s>correct</s> ou non partinent.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-del">&lt;del&gt;</td>
+                <td class="desc-el">Texte <del>suprimé</del>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-ins">&lt;ins&gt;</td>
+                <td class="desc-el">Text <ins>inserté</ins>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-mark">&lt;mark&gt;</td>
+                <td class="desc-el">Marqueur de <mark>texte</mark>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-sub">&lt;sub&gt;</td>
+                <td class="desc-el">Mise en <sub>indice</sub>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-sup">&lt;sup&gt;</td>
+                <td class="desc-el">Mise en <sup>Exposant</sup>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-u">&lt;u&gt;</td>
+                <td class="desc-el">Mettre un <u>sous ligne</u>.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-q">&lt;q&gt;</td>
+                <td class="desc-el">une courte <q>citation</q></td>
+              </tr>
+              <tr>
+                <td class="element" id="html-small">&lt;small&gt;</td>
+                <td class="desc-el">un petit <small>texte</small></td>
+              </tr>
+              <tr>
+                <td class="element" id="html-br">&lt;br/&gt;</td>
+                <td class="desc-el">Créer un <br> saut de ligne.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-hr">&lt;hr/&gt;</td>
+                <td class="desc-el">Créer un ligne
+                  <hr> de séparation.
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End balise-mise -->
+  <!-- Start balise-list -->
+  <div class="balise-list" id="balise-list">
+    <h2 class="main-title">Balise de liste et tableau</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Balise</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element" id="html-table">&lt;table&gt;</td>
+                <td class="desc-el">Tableau.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-thead">&lt;thead&gt;</td>
+                <td class="desc-el">En-tête de tableau.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-tbody">&lt;tbody&gt;</td>
+                <td class="desc-el">Corps de tableau.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-tfoot">&lt;tfoot&gt;</td>
+                <td class="desc-el">Bas de tableau.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-tr">&lt;tr&gt;</td>
+                <td class="desc-el">Ligne de tableau.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-th">&lt;th&gt;</td>
+                <td class="desc-el">Cellule d'en-tête.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-td">&lt;td&gt;</td>
+                <td class="desc-el">Cellule de tableau.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-ul">&lt;ul&gt;</td>
+                <td class="desc-el">Liste non-ordonné.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-ol">&lt;ol&gt;</td>
+                <td class="desc-el">Liste ordonné.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-li">&lt;li&gt;</td>
+                <td class="desc-el">Elément de liste.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End balise-list -->
+  <!-- Start balise-form -->
+  <div class="balise-form" id="balise-form">
+    <h2 class="main-title">Balise de media et formulaire</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Balise</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element" id="html-audio">&lt;audio&gt;</td>
+                <td class="desc-el">Inserer audio (.mp3, .aac, .ogg...).</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-video">&lt;video&gt;</td>
+                <td class="desc-el">Inserer audio (.mp4, .mpeg...)..</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-img">&lt;img&gt;</td>
+                <td class="desc-el">Inserer audio (.jpg, .png...).</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-area">&lt;area&gt;</td>
+                <td class="desc-el">Définit une zone particulière d'une image.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-form">&lt;form&gt;</td>
+                <td class="desc-el">Formulaire.</i></td>
+              </tr>
+              <tr>
+                <td class="element" id="html-datalist">&lt;datalist&gt;</td>
+                <td class="desc-el">Liste déroulante.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-select">&lt;select&gt;</td>
+                <td class="desc-el">Liste selectionnable.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-option">&lt;option&gt;</td>
+                <td class="desc-el">Elément d'une liste.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-textarea">&lt;textarea&gt;</td>
+                <td class="desc-el">Zone de texte.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-button">&lt;button&gt;</td>
+                <td class="desc-el">Button cliquable.</td>
+              </tr>
+              <tr>
+                <td class="element" id="html-label">&lt;label&gt;</td>
+                <td class="desc-el">Définir un titre d'une <a href="#html-input">&lt;input&gt;</a> element.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End balise-form -->
+  <!-- Start input-type -->
+  <div class="input-type" id="input-type">
+    <h2 class="main-title" id="html-input">Input type</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Balise</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">button</td>
+                <td class="desc-el"><input type="button" value="button"></td>
+              </tr>
+              <tr>
+                <td class="element">checkbox</td>
+                <td class="desc-el"><input type="checkbox" name="check" id="check"><label for="check"> checkbox</label>
+                </td>
+              </tr>
+              <tr>
+                <td class="element">color</td>
+                <td class="desc-el"><input type="color" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">Date</td>
+                <td class="desc-el"><input type="date" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">email</td>
+                <td class="desc-el"><input type="email" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">file</td>
+                <td class="desc-el"><input type="file" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">hidden</td>
+                <td class="desc-el"><input type="hidden" name=""></td>
+              </tr>
+              <tr>
+                <td class="element">Number</td>
+                <td class="desc-el"><input type="number" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">Password</td>
+                <td class="desc-el"><input type="password" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">radio</td>
+                <td class="desc-el"><input type="radio" name="radio" id="radio"><label for="radio"> radio</label></td>
+              </tr>
+              <tr>
+                <td class="element">range</td>
+                <td class="desc-el"><input type="range" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">search</td>
+                <td class="desc-el"><input type="search" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">tel</td>
+                <td class="desc-el"><input type="tel" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">text</td>
+                <td class="desc-el"><input type="text" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">time</td>
+                <td class="desc-el"><input type="time" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">url</td>
+                <td class="desc-el"><input type="url" name="" id=""></td>
+              </tr>
+              <tr>
+                <td class="element">submit</td>
+                <td class="desc-el"><input type="submit" value="Envoyer"></td>
+              </tr>
+              <tr>
+                <td class="element">reset</td>
+                <td class="desc-el"><input type="reset" value="Effacer"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End input-type -->
+  <!-- Start atrributs -->
+  <div class="atrributs" id="atrributs">
+    <h2 class="main-title">Les attributs</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <table class="pseudo">
+              <tr>
+                <th class="element">Attribut</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">action</td>
+                <td class="desc-el">L'URI d'un programme qui traite les informations envoyées par le formulaire.</td>
+              </tr>
+              <tr>
+                <td class="element">align</td>
+                <td class="desc-el">Cet attribut définit l'alignement horizontal de l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">alt</td>
+                <td class="desc-el">Un texte alternatif à afficher lorsque l'élément ne peut pas être affiché.</td>
+              </tr>
+              <tr>
+                <td class="element">autofocus</td>
+                <td class="desc-el">Cet attribut indique que l'élément doit recevoir le focus automatiquement une fois
+                  que la page est chargée.</td>
+              </tr>
+              <tr>
+                <td class="element">autoplay</td>
+                <td class="desc-el">Cet attribut indique que l'élément audio ou vidéo doit être lancé dès que possible.
+                </td>
+              </tr>
+              <tr>
+                <td class="element">charset</td>
+                <td class="desc-el">Cet attribut déclare l'encodage de caractères utilisé pour la page ou le script.
+                </td>
+              </tr>
+              <tr>
+                <td class="element">checked</td>
+                <td class="desc-el">Cet attribut indique si l'élément doit être vérifié.</td>
+              </tr>
+              <tr>
+                <td class="element 	attribut-universel">class</td>
+                <td class="desc-el">Cet attribut permet de définir la ou les classes auxquelles appartient un élément
+                  afin de le manipuler en script ou de le mettre en forme avec CSS.
+                </td>
+              </tr>
+              <tr>
+                <td class="element">colspan</td>
+                <td class="desc-el">Cet attribut définit le nombre de colonnes sur lequel une cellule dans le tableau
+                  doit s'étendre.
+                </td>
+              </tr>
+              <tr>
+                <td class="element">controls</td>
+                <td class="desc-el">Cet attribut indique si le navigateur doit afficher les contrôles de lecture du
+                  média pour l'utilisateur.
+                </td>
+              </tr>
+              <tr>
+                <td class="element">disabled</td>
+                <td class="desc-el">Cet attribut indique si l'utilisateur peut interagir avec l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">for</td>
+                <td class="desc-el">Cet attribut décrit l'élément auquel se rapporte l'élément courant.</td>
+              </tr>
+              <tr>
+                <td class="element">height</td>
+                <td class="desc-el">cet attribut définit la hauteur occupée par l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">hidden</td>
+                <td class="desc-el">Cet attribut empêche le rendu d'un élément sur une page tout en conservant les
+                  éléments fils actifs.</td>
+              </tr>
+              <tr>
+                <td class="element" id="attr-href">href</td>
+                <td class="desc-el">L'URL de la ressource liée.</td>
+              </tr>
+              <tr>
+                <td class="element">id</td>
+                <td class="desc-el">Cet attribut permet d'identifier un élément d'un document de façon unique.</td>
+              </tr>
+              <tr>
+                <td class="element">lang</td>
+                <td class="desc-el">Cet attribut définit la langue utilisée dans l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">list</td>
+                <td class="desc-el">Cet attribut constitue une liste d'options prédéfinie qui est suggérée à
+                  l'utilisateur.</td>
+              </tr>
+              <tr>
+                <td class="element">loop</td>
+                <td class="desc-el">Cet attribut indique si le média courant doit recommencer au début une fois que sa
+                  lecture est terminée.</td>
+              </tr>
+              <tr>
+                <td class="element">max</td>
+                <td class="desc-el">Cet attribut indique la valeur maximale autorisée.</td>
+              </tr>
+              <tr>
+                <td class="element">maxlength</td>
+                <td class="desc-el">Cet attribut définit le nombre maximal de caractères autorisé dans l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">minlength</td>
+                <td class="desc-el">Cet attribut définit le nombre minimal de caractères qui doivent être saisis dans
+                  l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">method</td>
+                <td class="desc-el">Cet attribut définit la méthode HTTP à utiliser pour l'envoi des données du
+                  formulaire (GET par défaut ou POST</td>
+              </tr>
+              <tr>
+                <td class="element">min</td>
+                <td class="desc-el">Cet attribut indique la valeur minimale autorisée.</td>
+              </tr>
+              <tr>
+                <td class="element">muted</td>
+                <td class="desc-el">Cet attribut indique si le son de la vidéo doit être coupé lorsque la page est
+                  chargée initialement.</td>
+              </tr>
+              <tr>
+                <td class="element">name</td>
+                <td class="desc-el">Le nom de l'élément qui peut être utilisé par le serveur pour identifier le champ
+                  d'un formulaire.</td>
+              </tr>
+              <tr>
+                <td class="element">novalidate</td>
+                <td class="desc-el">Cet attribut indique que les données du formulaire ne doivent pas être validées lors
+                  de l'envoi.</td>
+              </tr>
+              <tr>
+                <td class="element">placeholder</td>
+                <td class="desc-el">Cet attribut fournit une indication à l'utilisateur sur ce qu'il peut saisir dans le
+                  champ.</td>
+              </tr>
+              <tr>
+                <td class="element">poster</td>
+                <td class="desc-el">Cet attribut est une URL qui indique l'image à afficher tant que l'utilisateur n'a
+                  pas lancé la vidéo ou déplacé le
+                  curseur.</td>
+              </tr>
+              <tr>
+                <td class="element">readonly</td>
+                <td class="desc-el">Cet attribut indique si l'élément peut être édité.</td>
+              </tr>
+              <tr>
+                <td class="element" id="attr-rel">rel</td>
+                <td class="desc-el">Cet attribut définit la relation entre l'objet cible et l'objet du lien.</td>
+              </tr>
+              <tr>
+                <td class="element">required</td>
+                <td class="desc-el">Cet attribut indique si l'élément doit obligatoirement être renseigné dans le
+                  formulaire.</td>
+              </tr>
+              <tr>
+                <td class="element">rowspan</td>
+                <td class="desc-el">Cet attribut définit le nombre de lignes sur lesquelles une cellule doit s'étendre.
+                </td>
+              </tr>
+              <tr>
+                <td class="element">selected</td>
+                <td class="desc-el">Cet attribut définit la valeur qui sera sélectionnée au chargement de la page.</td>
+              </tr>
+              <tr>
+                <td class="element">src</td>
+                <td class="desc-el">Cet attribut indique l'URL du contenu embarqué.</td>
+              </tr>
+              <tr>
+                <td class="element">style</td>
+                <td class="desc-el">Cet attribut définit des styles CSS qui auront la priorité sur ceux définis
+                  précédemment. Il ne devrait être utilisé
+                  qu'à des fins de tests, car il est conseillé d'utiliser un/des fichier(s) à part pour gérer la mise en
+                  forme.</td>
+              </tr>
+              <tr>
+                <td class="element">target</td>
+                <td class="desc-el"></td>
+              </tr>
+              <tr>
+                <td class="element">title</td>
+                <td class="desc-el">Cet attribut définit un texte expliquant le contenu de l'élément et qui est
+                  généralement affiché sous la forme d'une
+                  bulle d'information au survol de l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">type</td>
+                <td class="desc-el">Cet attribut définit le type de l'élément.</td>
+              </tr>
+              <tr>
+                <td class="element">width</td>
+                <td class="desc-el">Cet attribut définit la largeur occupée sur l'écran.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End atrributs -->
+  <p class="copyright">Made With <i class="fas fa-heart"></i> By marouane mahboub</p>
+</body>
+
+</html>

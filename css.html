@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Start Header -->
+  <div class="header" id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="css.html" class="logo-css">
+          CSS
+        </a>
+        <a href="#">
+          <pre class="et"> et</pre>
+        </a>
+        <a href="index.html" class="logo-html" target="_blank">
+          <pre class="html"> HTML</pre>
+        </a>
+      </div>
+      <ul class="main-nav">
+        <li><a href="#pourquoi">Pourquoi CSS?</a></li>
+        <li><a href="#comment">Comment Ajouter CSS?</a></li>
+        <li><a href="#syntaxe">Syntaxe</a></li>
+        <li>
+          <a href="#">Other Links</a>
+          <!-- Start Megamenu -->
+          <div class="mega-menu">
+            <ul class="links">
+              <li>
+                <a href="#selecteur"><i class="fas fa-terminal"></i> Selecteur</a>
+              </li>
+              <li>
+                <a href="#selec-pseu"><i class="fas fa-stream"></i> Pseudo classes</a>
+              </li>
+              <li>
+                <a href="#css-box"><i class="fas fa-crop-alt"></i> Modèle de boite</a>
+              </li>
+              <li>
+                <a href="#proprietes"><i class="fas fa-tasks"></i> Liste des propriétés</a>
+              </li>
+              <li>
+                <a href="#grilles"><i class="fas fa-th"></i> Grilles CSS</a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Megamenu -->
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Header -->
+  <!-- Start Landing -->
+  <div class="landing">
+    <div class="container">
+      <div class="text">
+        <h1>C'est Quoi CSS?</h1>
+        <p>(<span class="start">C</span>ascading <span class="start">S</span>tyle <span class="start">S</span>heets)
+          C'est un language permet de décrire le style avec lequel
+          ta page html va s'afficher
+          ce qui te permet de changer la couleur ou la taille d'un texte par exemple.</p>
+      </div>
+      <div class="image">
+        <img src="imgs/css.png" alt="" />
+      </div>
+    </div>
+    <a href="#pourquoi" class="go-down">
+      <i class="fas fa-angle-double-down fa-2x"></i>
+    </a>
+  </div>
+  <!-- End Landing -->
+  <!-- Start Pourquoi -->
+  <div class="pourquoi" id="pourquoi">
+    <h2 class="main-title">Pourquoi CSS?</h2>
+    <div class="container">
+      <div class="desc">Quand tu as créer une page html il est possible de modifier la présentation via l'attribut
+        <a href="index.html#html-style" class="links">style</a>,
+        <div class="code-toolbar">
+          <pre class="language-html"
+            tabindex="0"><code class="language-html"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>p</span> <span class="attr-name">style</span><span class="attr-value"><span class="punctuation">=</span><span class="punctuation">"</span>color:red<span class="punctuation">"&gt;</span></span></code></pre>
+        </div>
+        l'inconvénient c'est que cela nécessite de le faire pour chaque balise, c'est pourqoui on utlilise le
+        feuille de style css.
+      </div>
+    </div>
+  </div>
+  <!-- End Pourquoi -->
+  <!-- Start Comment -->
+  <div class="comment" id="comment">
+    <h2 class="main-title">Comment Ajouter Css?</h2>
+    <div class="container">
+      <div class="desc">Pour ajouter le feuille de style css on commence par ajouter une référence dans notre fichier
+        <a href="index.html#structure" class="links">html</a> cela se fait on ajoutant une balise <a
+          href="index.html#html-link" class="links">&#060link&#062</a> dans l'en-tête
+        du fichier, l'attribut <a href="index.html#attr-href" class="links">href</a> point sur une
+        url comme un fichier ou une page de sites web par exemple, et l'attribut <a href="index.html#attr-rel"
+          class="links">rel</a>
+        indique que c'est une feuille de
+        style.
+      </div>
+      <div class="code-toolbar">
+        <pre class="language-html"
+          tabindex="0"><code class="language-html"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>link</span> <span class="attr-name">rel</span><span class="attr-value"><span class="punctuation">=</span><span class="punctuation">"</span>stylesheet<span class="punctuation">"</span></span> <span class="attr-name">href</span><span class="attr-value"><span class="punctuation">=</span><span class="punctuation">"</span>css/master.css<span class="punctuation">"</span></span><span class="punctuation">/&gt;</span></span></code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- End Comment -->
+  <!-- Start syntaxe -->
+  <div class="syntaxe" id="syntaxe">
+    <h2 class="main-title">Syntaxe</h2>
+    <div class="container">
+      <div class="desc">Les styles sont définis sous la forme d'un sélecteur. avec un clé et valeur sont regroupés en
+        bloc entre des acolades.</div>
+      <div class="code-toolbar">
+        <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">Selecteur </span><span class="punctuation">{</span>
+  <span class="property">propriété 1</span><span class="punctuation">:</span> <span class="value">valuer 1</span><span class="punctuation">;</span>
+  <span class="property">propriété 2</span><span class="punctuation">:</span> <span class="value">valuer 2</span><span class="punctuation">;</span>
+<span class="punctuation">}</span></code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- End syntaxe -->
+  <!-- Start selecteur -->
+  <div class="selecteur" id="selecteur">
+    <h2 class="main-title">Selecteur</h2>
+    <div class="container">
+      <div class="desc">Un sélécteur est un motif de reconnaissance permettant d’appliquer un style aux éléments de
+        l’arbre du document HTML, Il existe differents types des selectures:</div>
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Le sélecteur universel</h3>
+            <p>
+              À tous les éléments de la page : le sélecteur universel <span>*</span> agit sur tous les éléments HTML.
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">* </span><span class="punctuation">{ </span><span class="property">color</span><span class="punctuation">:</span> <span class="value">red</span><span class="punctuation">;</span><span class="punctuation"> }</span>
+<span class="green">/* Pour définir une couleur rouge par défaut */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les sélecteur de type</h3>
+            <p>
+              À toutes les instances d’un élément : les sélecteurs de type agissent sur un type d’élément HTML.
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">p </span><span class="punctuation">{ </span><span class="property">color</span><span class="punctuation">:</span> <span class="value">blue</span><span class="punctuation">;</span><span class="punctuation"> }</span>
+<span class="green">/* pour définir une couleur bleue pour tous les textes des paragraphes */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Le regroupement de sélecteurs</h3>
+            <p>
+              À différents éléments simultanément : le regroupement de sélecteurs de type
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-css"
+                tabindex="0"><code class="language-css"><span class="selector">h3,h4,h5,h6 </span><span class="punctuation">{ </span><span class="property">color</span><span class="punctuation">:</span> <span class="value">brown</span><span class="punctuation">;</span><span class="punctuation"> }</span>
+<span class="green">/* pour définir une couleur marron pour tous les titres de niveau 3, 4, 5 et 6 */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les sélecteurs de classe</h3>
+            <p>
+              Le sélecteur de classe est un nom que l’ont défini librement. Il peut être réutilisé plusieurs fois dans
+              l’HTML.
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-html"
+                tabindex="0"><code class="language-html"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>p</span> <span class="attr-name">class</span><span class="attr-value"><span class="punctuation">=</span><span class="punctuation">"</span>vert<span class="punctuation">"></span></span><span class="tag"><span class="punctuation">&lt;</span><span class="punctuation">/</span>p<span class="punctuation">&gt;</span></span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css"
+                tabindex="0"><code class="language-css"><span class="selector">p.vert </span><span class="punctuation">{ </span><span class="property">color</span><span
+                class="punctuation">:</span> <span class="value">green</span><span class="punctuation">;</span><span
+                class="punctuation"> }</span>
+<span class="green">/* pour définir une couleur verte pour les textes de certains paragraphes (ceux de la classe .vert) */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les sélecteurs d’id</h3>
+            <p>
+              Le sélecteur d’identifiant ou ID est un nom que l’ont défini librement. Il peut être réutilisé que seule
+              fois dans l’HTML.
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-html"
+                tabindex="0"><code class="language-html"><span class="tag"><span class="tag"><span class="punctuation">&lt;</span>p</span> <span class="attr-name">id</span><span class="attr-value"><span class="punctuation">=</span><span class="punctuation">"</span>grise<span class="punctuation">"></span></span><span class="tag"><span class="punctuation">&lt;</span><span class="punctuation">/</span>p<span class="punctuation">&gt;</span></span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">p#grise </span><span class="punctuation">{ </span><span class="property">color</span><span
+                  class="punctuation">:</span> <span class="value">gray</span><span class="punctuation">;</span><span
+                  class="punctuation"> }</span>
+<span class="green">/* ou */</span>
+<span class="selector">#grise </span><span class="punctuation">{ </span><span class="property">color</span><span
+                  class="punctuation">:</span> <span class="value">gray</span><span class="punctuation">;</span><span
+                  class="punctuation"> }</span>
+<span class="green">/* pour définir une couleur grise pour le texte d’un paragraphe précis */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les sélecteurs descendants</h3>
+            <p>
+              À un élément directement ou indirectement contenu dans un autre élément : les sélecteurs descendants
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-html" tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>div<span class="punctuation">&gt;</span></span>
+    <span class="punctuation">...</span>
+        <span class="tag"><span class="punctuation">&lt;</span>h1<span class="punctuation">&gt;</span></span> Header <span class="tag"><span class="punctuation">&lt;/</span>h1<span class="punctuation">&gt;</span></span>
+    <span class="punctuation">...</span>
+<span class="tag"><span class="punctuation">&lt;/</span>div<span class="punctuation">&gt;</span></span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">div h1 </span><span class="punctuation">{ </span><span class="property">color</span><span
+                  class="punctuation">:</span> <span class="value">pink</span><span class="punctuation">;</span><span
+                  class="punctuation"> }</span>
+<span class="green">/* pour définir une couleur rose d’un élément h1 contenu dans un élément div */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les sélecteurs d’enfant</h3>
+            <p>
+              À un élément directement contenu dans un autre élément : les sélecteurs d’enfant
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-html" tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>p<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>em<span class="punctuation">&gt;</span></span> texte 1 <span class="tag"><span class="punctuation">&lt;/</span>em<span class="punctuation">&gt;</span></span>
+<span class="tag"><span class="punctuation">&lt;/</span>p<span class="punctuation">&gt;</span></span>
+<span class="tag"><span class="punctuation">&lt;</span>p<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>span<span class="punctuation">&gt;</span></span>
+        <span class="tag"><span class="punctuation">&lt;</span>em<span class="punctuation">&gt;</span></span> texte 2 <span
+    class="tag"><span class="punctuation">&lt;/</span>em<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;/</span>span<span class="punctuation">&gt;</span></span>
+<span class="tag"><span class="punctuation">&lt;/</span>p<span class="punctuation">&gt;</span></span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css"
+                tabindex="0"><code class="language-css"><span class="selector">p&gt;em </span><span class="punctuation">{ </span><span class="property">color</span><span
+                  class="punctuation">:</span> <span class="value">yellow</span><span class="punctuation">;</span><span
+                  class="punctuation"> }</span>
+<span class="green">/* pour définir une couleur jaune d’un élément em descendant de l’élément p */</span>
+<span class="green">/* les style s’appliquera seulement à Texte 1 parceque Texte 2 n'est pas un enfant */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les sélecteurs de frère adjacents</h3>
+            <p>
+              À un élément suivant un autre élément : les sélecteurs d’enfants adjacents
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-html" tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>div<span class="punctuation">&gt;</span></span>...<span class="tag"><span class="punctuation">&lt;/</span>div<span class="punctuation">&gt;</span></span>
+<span class="tag"><span class="punctuation">&lt;</span>p<span class="punctuation">&gt;</span></span><span
+                class="punctuation"> Texte </span><span class="tag"><span class="punctuation">&lt;/</span>p<span
+                  class="punctuation">&gt;</span></span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">div + p </span><span class="punctuation">{ </span><span class="property">color</span><span
+                  class="punctuation">:</span> <span class="value">khaki</span><span class="punctuation">;</span><span
+                  class="punctuation"> }</span>
+<span class="green">/* pour définir une couleur kaki d’un élément p suivant directement un élément div */</span>
+<span class="green">/* le style s’appliquera à le texte entre &lt;p&gt; &lt;/p&gt; */</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les sélecteur d’attribut</h3>
+            <p>
+              Les sélecteurs d’attribut ciblent un élément en utilisant la présence d’un certain attribut ou de la
+              valeur d’un attribut.
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-html"
+                tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>inptut <span class="attr-name">type</span><span class="punctuation">="</span><span class="attr-value">tel</span><span class="punctuation">"</span><span class="punctuation">&gt;</span></span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css"
+                tabindex="0"><code class="language-css"><span class="selector">input [type = tel] </span><span class="punctuation">{ </span><span class="property">font-weight</span><span
+                          class="punctuation">:</span> <span class="value">bold</span><span class="punctuation">;</span><span
+                          class="punctuation"> }</span>
+<span class="green">/* Représente un élément input avec un attribut nommé type dont la valeur est tel */</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End selecteur -->
+  <!-- Start selec-pseu -->
+  <div class="selec-pseu" id="selec-pseu">
+    <h2 class="main-title">Pseudo Classes</h2>
+    <div class="container">
+      <div class="desc">Une pseudo-classe CSS est un mot-clé ajouté au sélecteur pour indiquer un état particulier de
+        l’élément qui doit être sélectionné.</div>
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les pseudo-classes</h3>
+            <p> Par exemple, <span>:hover</span> appliquera le style quand l’utilisateur survolera l’élément visé par le
+              sélecteur.
+            </p>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">a:hover </span><span class="punctuation">{ </span>
+    <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span class="punctuation">;</span>
+<span class="punctuation"> }</span></code></pre>
+            </div>
+            <p><span>Autres exemple de pseudo-classe</span></p>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Les pseudo-classes</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">:link</td>
+                <td class="desc-el">cible les liens non visités</td>
+              </tr>
+              <tr>
+                <td class="element">:hover</td>
+                <td class="desc-el">cible un élément survolé</td>
+              </tr>
+              <tr>
+                <td class="element">:active</td>
+                <td class="desc-el">cible un élément activé par l’utilisateur</td>
+              </tr>
+              <tr>
+                <td class="element">:focus</td>
+                <td class="desc-el">cible un élément pointé physiquement</td>
+              </tr>
+              <tr>
+                <td class="element">:visited</td>
+                <td class="desc-el">cible un lien déjà visité par l’utilisateur</td>
+              </tr>
+              <tr>
+                <td class="element">:target</td>
+                <td class="desc-el">cible une ancre</td>
+              </tr>
+              <tr>
+                <td class="element">:first-child</td>
+                <td class="desc-el">cible le premier enfant d’un élément</td>
+              </tr>
+              <tr>
+                <td class="element">:last-child</td>
+                <td class="desc-el">cible le dernier enfant d’un élément</td>
+              </tr>
+              <tr>
+                <td class="element">:nth-child(N)</td>
+                <td class="desc-el">cible le N<sup>iéme</sup> du type désigné</td>
+              </tr>
+              <tr>
+                <td class="element">:first-of-type</td>
+                <td class="desc-el">cible le 1er enfant du type désigné</td>
+              </tr>
+              <tr>
+                <td class="element">:last-of-type</td>
+                <td class="desc-el">cible le dernier enfant du type désigné</td>
+              </tr>
+              <tr>
+                <td class="element">:only-child</td>
+                <td class="desc-el">cible l’enfant unique</td>
+              </tr>
+              <tr>
+                <td class="element">:only-of-type</td>
+                <td class="desc-el">cible l’élément unique du type désigné</td>
+              </tr>
+              <tr>
+                <td class="element">:empty</td>
+                <td class="desc-el">élément sans enfant</td>
+              </tr>
+              <tr>
+                <td class="element">:not()</td>
+                <td class="desc-el">négation d’un sélecteur</td>
+              </tr>
+              <tr>
+                <td class="element">:enabled</td>
+                <td class="desc-el">élément actif</td>
+              </tr>
+              <tr>
+                <td class="element">:disabled</td>
+                <td class="desc-el">élément inactif</td>
+              </tr>
+              <tr>
+                <td class="element">:checked</td>
+                <td class="desc-el">élément coché</td>
+              </tr>
+              <tr>
+                <td class="element">:required</td>
+                <td class="desc-el">élément requis pour la soumission</td>
+              </tr>
+              <tr>
+                <td class="element">:optional</td>
+                <td class="desc-el">élément optionnel lors de la soumission</td>
+              </tr>
+              <tr>
+                <td class="element">:valid</td>
+                <td class="desc-el">élément qui remplit les exigences de son type</td>
+              </tr>
+              <tr>
+                <td class="element">:invalid</td>
+                <td class="desc-el">élément qui ne remplit pas (encore) les exigences</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Les pseudo-éléments</h3>
+            <p>Comme les pseudo-classes, les pseudo-éléments sont ajoutés aux sélecteurs.</p>
+            <p>Au lieu de décrire un état contextuel (survol), ils permettent de cibler certaines parties du document,
+              et de créer « virtuellement » un nouvel élément... (j'ai pas trouvé mieux comme explication...)</p>
+            <p>Par exemple ::first-line cible la première ligne de l’élément ciblé par le sélecteur.
+            </p>
+            <br>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">p::first-line </span><span class="punctuation">{ </span>
+    <span class="property">color</span><span class="punctuation">:</span> <span class="value">#c7f6d1</span><span class="punctuation">;</span>
+<span class="punctuation"> }</span></code></pre>
+            </div>
+            <p><span>Autres exemple de pseudo-element</span></p>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Les pseudo-elements</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">:before</td>
+                <td class="desc-el">cible le premier enfant virtuel de l’élément</td>
+              </tr>
+              <tr>
+                <td class="element">:after</td>
+                <td class="desc-el">cible le dernier enfant virtuel de l’élément</td>
+              </tr>
+              <tr>
+                <td class="element">::first-letter</td>
+                <td class="desc-el">cible la première lettre de la première ligne d’un bloc</td>
+              </tr>
+              <tr>
+                <td class="element">::first-line</td>
+                <td class="desc-el">cible la première ligne de l’élément ciblé par le sélecteur</td>
+              </tr>
+              <tr>
+                <td class="element">::selection</td>
+                <td class="desc-el">applique des règles de décoration à la portion du texte qui a été surligné (non
+                  standard)</td>
+              </tr>
+            </table>
+            <p>Vous verrez parfois le double deux-points (::) au lieu du simple (:). C’est une partie de CSS3 et une
+              tentative de
+              différencier les pseudo-classes et les pseudo-éléments. La plupart des navigateurs acceptent les deux
+              valeurs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End selec-pseu -->
+  <!-- Start Css Box -->
+  <div class="css-box" id="css-box">
+    <h2 class="main-title">Modèle de boite</h2>
+    <div class="container">
+      <div class="desc">Chaque boîte possède une aire de contenu (un texte, une image, etc.) entourée en option par une
+        aire d’espacement (<a href="#padding" class="links">padding</a>), une aire de bordure (<a href="#border"
+          class="links">border</a>) et une aire de marge
+        (<a href="#margin" class="links">margin</a>).</div>
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <div class="full-box">
+              <div class="margin box-model">
+                <h3 class="title">Margin</h3>
+                <div class="border box-model">
+                  <h3 class="title">Border</h3>
+                  <div class="padding box-model">
+                    <h3 class="title">Padding</h3>
+                    <div class="content box-model">
+                      <h3 class="title">Content</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Box sizing</h3>
+            <p>La propriété box-sizing est issue de la spécification CSS3.</p>
+            <p>Elle est utilisée pour modifier le modèle de boîte par défaut qui est utilisé pour calculer la largeur et
+              la hauteur des éléments.</p>
+            <p>Elle accepte 3 valeurs :</p>
+            <div class="code-toolbar">
+              <pre class="language-css"
+                tabindex="0"><code class="language-css"><span class="property">box-sizing</span><span class="punctuation">: </span><span class="value">content-box</span><span class="punctuation">;</span>
+<span class="green">/* C’est la valeur par défaut. Les propriétés width et height sont calculées en additionnant le padding, les border et le contenu. */</span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css"
+                tabindex="0"><code class="language-css"><span class="property">box-sizing</span><span class="punctuation">: </span><span class="value">padding-box</span><span class="punctuation">;</span>
+<span class="green">/* Les propriétés width et height sont calculées en additionnant le padding et le contenu, mais pas le border. */</span></code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css"
+                tabindex="0"><code class="language-css"><span class="property">box-sizing</span><span class="punctuation">: </span><span class="value">border-box</span><span class="punctuation">;</span>
+<span class="green">/* Les propriétés width et height incluent le padding, les border, mais pas la marge extérieure. */</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End css-box -->
+  <!-- Start proprietes -->
+  <div class="proprietes" id="proprietes">
+    <h2 class="main-title">Liste des propriétés</h2>
+    <div class="container">
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Propriétés de mise en forme du texte</h3>
+            <p> Qu'est-ce que la mise en forme de texte ? C'est tout ce qui touche à la présentation du texte proprement
+              dit : le gras,
+              l'italique, le souligné, la police, l'alignement, etc.
+            </p>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Propriété</th>
+                <th class="value">Valeurs (exemples)</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">font-family</td>
+                <td class="value">police1, police2, police3, serif, sans-serif, monospace</td>
+                <td class="desc-el">Nom de police</td>
+              </tr>
+              <tr>
+                <td class="element">@font-face</td>
+                <td class="value">Nom et source de la police</td>
+                <td class="desc-el">Police personnalisée</td>
+              </tr>
+              <tr>
+                <td class="element">font-size</td>
+                <td class="value">1.3em, 16px, 120%...</td>
+                <td class="desc-el">Taille du texte</td>
+              </tr>
+              <tr>
+                <td class="element">font-weight</td>
+                <td class="value">bold, normal</td>
+                <td class="desc-el">Gras</td>
+              </tr>
+              <tr>
+                <td class="element">font-style</td>
+                <td class="value">italic, oblique, normal</td>
+                <td class="desc-el">Italique</td>
+              </tr>
+              <tr>
+                <td class="element">text-decoration</td>
+                <td class="value">underline, overline, line-through, blink, none</td>
+                <td class="desc-el">Soulignement, ligne au-dessus, barré ou clignotant</td>
+              </tr>
+              <tr>
+                <td class="element">font-variant</td>
+                <td class="value">small-caps, normal</td>
+                <td class="desc-el">Petites capitales</td>
+              </tr>
+              <tr>
+                <td class="element">text-transform</td>
+                <td class="value">capitalize, lowercase, uppercase</td>
+                <td class="desc-el">Capitales</td>
+              </tr>
+              <tr>
+                <td class="element">font</td>
+                <td class="value"> </td>
+                <td class="desc-el">Super propriété de police. Combine : font-weight, font-style, font-size,
+                  font-variant, font-family.</td>
+              </tr>
+              <tr>
+                <td class="element">text-align</td>
+                <td class="value">left, center, right, justify</td>
+                <td class="desc-el">Alignement horizontal</td>
+              </tr>
+              <tr>
+                <td class="element">vertical-align</td>
+                <td class="value">baseline, middle, sub, super, top, bottom</td>
+                <td class="desc-el">Alignement vertical (cellules de tableau ou éléments inlineblock uniquement)</td>
+              </tr>
+              <tr>
+                <td class="element">line-height</td>
+                <td class="value">18px, 120%, normal...</td>
+                <td class="desc-el">Hauteur de ligne</td>
+              </tr>
+              <tr>
+                <td class="element">text-indent</td>
+                <td class="value">25px</td>
+                <td class="desc-el">Alinéa</td>
+              </tr>
+              <tr>
+                <td class="element">white-space</td>
+                <td class="value">pre, nowrap, normal</td>
+                <td class="desc-el">Césure</td>
+              </tr>
+              <tr>
+                <td class="element">word-wrap</td>
+                <td class="value">break-word, normal</td>
+                <td class="desc-el">Césure forcée</td>
+              </tr>
+              <tr>
+                <td class="element">text-shadow</td>
+                <td class="value">5px 5px 2px blue (horizontale, verticale, fondu, couleur)</td>
+                <td class="desc-el">Ombre de texte</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Propriétés de couleur et de fond</h3>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Propriété</th>
+                <th class="value">Valeurs (exemples)</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">color</td>
+                <td class="value">nom, rgb(rouge,vert,bleu), rgba(rouge,vert,bleu,transparence), #CF1A20...</td>
+                <td class="desc-el">Couleur du texte</td>
+              </tr>
+              <tr>
+                <td class="element">background-color</td>
+                <td class="value">Identique à color</td>
+                <td class="desc-el">Couleur de fond</td>
+              </tr>
+              <tr>
+                <td class="element">background-image</td>
+                <td class="value">url('image.png')</td>
+                <td class="desc-el">Image de fond</td>
+              </tr>
+              <tr>
+                <td class="element">background-attachment</td>
+                <td class="value">fixed, scroll</td>
+                <td class="desc-el">Fond fixe</td>
+              </tr>
+              <tr>
+                <td class="element">background-repeat</td>
+                <td class="value">repeat-x, repeat-y, no-repeat, repeat</td>
+                <td class="desc-el">Répétition du fond</td>
+              </tr>
+              <tr>
+                <td class="element">background-position</td>
+                <td class="value">(x y), top, center, bottom, left, right</td>
+                <td class="desc-el">Position du fond</td>
+              </tr>
+              <tr>
+                <td class="element">background</td>
+                <td class="value"> </td>
+                <td class="desc-el">Super propriété du fond. Combine : background-image, background-repeat,
+                  background-attachment, background-position</td>
+              </tr>
+              <tr>
+                <td class="element">opacity</td>
+                <td class="value"> 0.5</td>
+                <td class="desc-el">Transparence</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Propriétés des boîtes</h3>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Propriété</th>
+                <th class="value">Valeurs (exemples)</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">width</td>
+                <td class="value">150px, 80%...</td>
+                <td class="desc-el">Largeur</td>
+              </tr>
+              <tr>
+                <td class="element">height</td>
+                <td class="value">150px, 80%...</td>
+                <td class="desc-el">Hauteur</td>
+              </tr>
+              <tr>
+                <td class="element">min-width</td>
+                <td class="value">150px, 80%...</td>
+                <td class="desc-el">Largeur minimale</td>
+              </tr>
+              <tr>
+                <td class="element">max-width</td>
+                <td class="value">150px, 80%...</td>
+                <td class="desc-el">Largeur maximale</td>
+              </tr>
+              <tr>
+                <td class="element">min-height</td>
+                <td class="value">150px, 80%...</td>
+                <td class="desc-el">Hauteur minimale</td>
+              </tr>
+              <tr>
+                <td class="element">max-height</td>
+                <td class="value">150px, 80%...</td>
+                <td class="desc-el">Hauteur maximale</td>
+              </tr>
+              <tr>
+                <td class="element">margin-top</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge en haut</td>
+              </tr>
+              <tr>
+                <td class="element">margin-left</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge à gauche</td>
+              </tr>
+              <tr>
+                <td class="element">margin-right</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge à droite</td>
+              </tr>
+              <tr>
+                <td class="element">margin-bottom</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge en bas</td>
+              </tr>
+              <tr>
+                <td class="element" id="margin">margin</td>
+                <td class="value">23px 5px 23px 5px (haut, droite, bas, gauche)</td>
+                <td class="desc-el">Super-propriété de marge. Combine : margin-top, margin-right, marginbottom,
+                  margin-left.</td>
+              </tr>
+              <tr>
+                <td class="element">padding-top</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge intérieure en haut</td>
+              </tr>
+              <tr>
+                <td class="element">padding-left</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge intérieure à gauche</td>
+              </tr>
+              <tr>
+                <td class="element">padding-right</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge intérieure à droite</td>
+              </tr>
+              <tr>
+                <td class="element">padding-bottom</td>
+                <td class="value">23px</td>
+                <td class="desc-el">Marge intérieure en bas</td>
+              </tr>
+              <tr>
+                <td class="element" id="padding">padding</td>
+                <td class="value">23px 5px 23px 5px (haut, droite, bas, gauche)</td>
+                <td class="desc-el">Super-propriété de marge intérieure. Combine : padding-top, padding-right,
+                  padding-bottom, padding-left.</td>
+              </tr>
+              <tr>
+                <td class="element">border-width</td>
+                <td class="value">3px</td>
+                <td class="desc-el">Épaisseur de bordure</td>
+              </tr>
+              <tr>
+                <td class="element">border-color</td>
+                <td class="value">nom, rgb(rouge,vert,bleu), rgba(rouge,vert,bleu,transparence), #CF1A20...</td>
+                <td class="desc-el">Couleur de bordure</td>
+              </tr>
+              <tr>
+                <td class="element">border-style</td>
+                <td class="value">solid, dotted, dashed, double, groove, ridge, inset, outset</td>
+                <td class="desc-el">Type de bordure</td>
+              </tr>
+              <tr>
+                <td class="element" id="border">border</td>
+                <td class="value">3px solid black</td>
+                <td class="desc-el">Super-propriété de bordure. Combine border-width, border-color, border-style. Existe
+                  aussi en version border-top, border-right, border-bottom, border-left.</td>
+              </tr>
+              <tr>
+                <td class="element">border-radius</td>
+                <td class="value">5px</td>
+                <td class="desc-el">Bordure arrondie</td>
+              </tr>
+              <tr>
+                <td class="element">box-shadow</td>
+                <td class="value">6px 6px 0px black (horizontale, verticale, fondu, couleur)</td>
+                <td class="desc-el">Ombre de boîte</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Propriétés de positionnement et d'affichage</h3>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Propriété</th>
+                <th class="value">Valeurs (exemples)</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">display</td>
+                <td class="value">block, inline, inline-block, table, table-cell, none...</td>
+                <td class="desc-el">Type d'élément (block, inline, inline-block, none…)</td>
+              </tr>
+              <tr>
+                <td class="element">visibility</td>
+                <td class="value">visible, hidden</td>
+                <td class="desc-el">Visibilité</td>
+              </tr>
+              <tr>
+                <td class="element">clip</td>
+                <td class="value">rect (0px, 60px, 30px, 0px)
+                  <br> rect (haut, droite, bas, gauche).
+                </td>
+                <td class="desc-el">Affichage d'une partie de l'élément</td>
+              </tr>
+              <tr>
+                <td class="element">overflow</td>
+                <td class="value">auto, scroll, visible, hidden</td>
+                <td class="desc-el">Comportement en cas de dépassement</td>
+              </tr>
+              <tr>
+                <td class="element">float</td>
+                <td class="value">left, right, none</td>
+                <td class="desc-el">Flottant</td>
+              </tr>
+              <tr>
+                <td class="element">clear</td>
+                <td class="value">left, right, both, none</td>
+                <td class="desc-el">Arrêt d'un flottant </td>
+              </tr>
+              <tr>
+                <td class="element">position</td>
+                <td class="value">relative, abs20px</td>
+                <td class="desc-el">Positionnement</td>
+              </tr>
+              <tr>
+                <td class="element">top</td>
+                <td class="value">20px</td>
+                <td class="desc-el">Position par rapport au haut</td>
+              </tr>
+              <tr>
+                <td class="element">bottom</td>
+                <td class="value">20px</td>
+                <td class="desc-el">Position par rapport au bas</td>
+              </tr>
+              <tr>
+                <td class="element">left</td>
+                <td class="value">20px</td>
+                <td class="desc-el">Position par rapport à la gauche</td>
+              </tr>
+              <tr>
+                <td class="element">right</td>
+                <td class="value">20px</td>
+                <td class="desc-el">Position par rapport à la droite</td>
+              </tr>
+              <tr>
+                <td class="element">z-index</td>
+                <td class="value">2</td>
+                <td class="desc-el">Ordre d'affichage en cas de superposition.
+                  La plus grande valeur est affichée par-dessus les autres.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Propriétés des listes</h3>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Propriété</th>
+                <th class="value">Valeurs (exemples)</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">list-style-type</td>
+                <td class="value">disc, circle, square, decimal, lowerroman, upper-roman, lower-alpha, upper-alpha, none
+                </td>
+                <td class="desc-el">Type de liste</td>
+              </tr>
+              <tr>
+                <td class="element">list-style-position</td>
+                <td class="value">inside, outside</td>
+                <td class="desc-el">Position en retrait</td>
+              </tr>
+              <tr>
+                <td class="element">list-style-image</td>
+                <td class="value">url('puce.png')</td>
+                <td class="desc-el">Puce personnalisée</td>
+              </tr>
+              <tr>
+                <td class="element">list-style</td>
+                <td class="value"> </td>
+                <td class="desc-el">Super-propriété de liste. Combine list-style-type, list-style-position,
+                  list-style-image.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Propriétés des tableaux</h3>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Propriété</th>
+                <th class="value">Valeurs (exemples)</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">border-collapse</td>
+                <td class="value">collapse, separate</td>
+                <td class="desc-el">Fusion des bordures</td>
+              </tr>
+              <tr>
+                <td class="element">empty-cells</td>
+                <td class="value">hide, show</td>
+                <td class="desc-el">Affichage des cellules vides</td>
+              </tr>
+              <tr>
+                <td class="element">caption-side</td>
+                <td class="value">bottom, top</td>
+                <td class="desc-el">Position du titre du tableau</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Autres Propriétés</h3>
+            <br>
+            <table class="pseudo">
+              <tr>
+                <th class="element">Propriété</th>
+                <th class="value">Valeurs (exemples)</th>
+                <th class="desc-el">Description</th>
+              </tr>
+              <tr>
+                <td class="element">cursor</td>
+                <td class="value">crosshair, default, help, move, pointer, progress, text, wait, e-resize, ne-resize,
+                  auto...</td>
+                <td class="desc-el">Curseur de souris</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End proprietes -->
+  <!-- Start grilles -->
+  <div class="grilles" id="grilles">
+    <h2 class="main-title">Grilles CSS</h2>
+    <div class="container">
+      <div class="desc">Le module CSS Grid layout (modèle de disposition en grille) est un module de la spécification
+        CSS qui permet de créer
+        des mises en page en divisant l'espace d'affichage en régions utilisables par une application ou en définissant
+        des
+        relations de taille, position et d'empilement entre les éléments HTML.</div>
+      <div class="info">
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> C'est quoi grille CSS?</h3>
+            <p>
+              Comme les tableaux, la grille permet d'aligner des éléments sous forme de colonnes et de lignes mais à la
+              différence des tableaux, la grille n'a pas de structure de contenu. Ainsi, on peut créer de nombreuses
+              mises en page qui n'auraient pas été possibles avec les tableaux. Ainsi, les éléments fils d'un conteneur
+              en grille peuvent être positionnés afin qu'ils se chevauchent ou qu'ils se comportent comme des éléments
+              positionnés.
+            </p>
+            <p>Un exemple simple:</p>
+            <p>Dans l'exemple qui suit, on montre comment utiliser une grille avec trois pistes en colonnes pour
+              laquelle les nouvelles lignes créées mesureront au moins 100 pixels et auront au plus la taille
+              automatique (définie par leur contenu). Les éléments sont placés sur la grille grâce aux numéros des
+              lignes horizontales et verticales.</p>
+            <br>
+            <div class="code-toolbar">
+              <pre class="language-html" tabindex="0"><code class="language-html"><span class="tag"><span class="punctuation">&lt;</span>div <span class="attr-name">class</span><span class="punctuation">="</span><span class="attr-value">wrapper</span><span class="punctuation">"&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>div <span class="attr-name">class</span><span
+                    class="punctuation">="</span><span class="attr-value">one</span><span class="punctuation">"&gt; Un &lt;/</span>div<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>div <span class="attr-name">class</span><span
+                    class="punctuation">="</span><span class="attr-value">two</span><span class="punctuation">"&gt; Deux &lt;/</span>div<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>div <span class="attr-name">class</span><span
+                    class="punctuation">="</span><span class="attr-value">three</span><span class="punctuation">"&gt; Trois &lt;/</span>div<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>div <span class="attr-name">class</span><span
+                    class="punctuation">="</span><span class="attr-value">four</span><span class="punctuation">"&gt; Quatre &lt;/</span>div<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>div <span class="attr-name">class</span><span
+                    class="punctuation">="</span><span class="attr-value">five</span><span class="punctuation">"&gt; Cinq &lt;/</span>div<span class="punctuation">&gt;</span></span>
+    <span class="tag"><span class="punctuation">&lt;</span>div <span class="attr-name">class</span><span
+                    class="punctuation">="</span><span class="attr-value">six</span><span class="punctuation">"&gt; Six &lt;/</span>div<span class="punctuation">&gt;</span></span>
+<span class="tag"><span class="punctuation">&lt;/</span>div<span class="punctuation">&gt;</span></span>
+                  </code></pre>
+            </div>
+            <div class="code-toolbar">
+              <pre class="language-css" tabindex="0"><code class="language-css"><span class="selector">.wrapper </span> <span class="punctuation">{</span>
+    <span class="property">display</span><span class="punctuation">: </span> <span class="value">grid</span><span class="punctuation">;</span>
+    <span class="property">grid-template-columns</span><span class="punctuation">: </span> <span class="value">repeat(<span class="punctuation">3, 1fr</span>)</span><span class="punctuation">;</span>
+    <span class="property">grid-gap</span><span class="punctuation">: </span> <span class="value">10px</span><span class="punctuation">;</span>
+    <span class="property">grid-auto-rows</span><span class="punctuation">: </span> <span class="value">minmax(<span class="punctuation">100px, auto</span>)</span><span class="punctuation">;</span>
+<span class="punctuation">}</span>
+<span class="selector">.one </span> <span class="punctuation">{</span>
+    <span class="property">grid-columns</span><span class="punctuation">: </span> <span class="value">1 / 3</span><span
+          class="punctuation">;</span>
+    <span class="property">grid-rows</span><span class="punctuation">: </span> <span class="value">1</span><span
+          class="punctuation">;</span>
+<span class="punctuation">}</span>
+<span class="selector">.two </span> <span class="punctuation">{</span>
+    <span class="property">grid-area</span><span class="punctuation">: </span> <span class="value">1 / 2 / 3 / 4</span><span
+          class="punctuation">;</span>
+<span class="punctuation">}</span>
+<span class="selector">.three </span> <span class="punctuation">{</span>
+    <span class="property">grid-area</span><span class="punctuation">: </span> <span class="value">2 / 1 / 5 / 1</span><span
+          class="punctuation">;</span>
+<span class="punctuation">}</span>
+<span class="selector">.four </span> <span class="punctuation">{</span>
+    <span class="property">grid-area</span><span class="punctuation">: </span> <span class="value">3 / 3 / 3 / 3</span><span
+          class="punctuation">;</span>
+<span class="punctuation">}</span>
+<span class="selector">.five </span> <span class="punctuation">{</span>
+    <span class="property">grid-area</span><span class="punctuation">: </span> <span class="value">4 / 2 / 4 / 2</span><span
+          class="punctuation">;</span>
+<span class="punctuation">}</span>
+<span class="selector">.six </span> <span class="punctuation">{</span>
+    <span class="property">grid-area</span><span class="punctuation">: </span> <span class="value">4 / 3 / 4 / 3</span><span
+          class="punctuation">;</span>
+<span class="punctuation">}</span></code></pre>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="one"> Un </div>
+            <div class="two"> Deux </div>
+            <div class="three"> Trois </div>
+            <div class="four"> Quatre </div>
+            <div class="five"> Cinq </div>
+            <div class="six"> Six </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="text">
+            <h3><i class="fas fa-check"></i> Propriétés Grilles CSS</h3>
+            <p>
+            <ul>
+              <li><i class="fas fa-disease"></i>grid-template-columns</li>
+              <li><i class="fas fa-disease"></i>grid-template-rows</li>
+              <li><i class="fas fa-disease"></i>grid-template-areas</li>
+              <li><i class="fas fa-disease"></i>grid-template</li>
+              <li><i class="fas fa-disease"></i>grid-auto-columns</li>
+              <li><i class="fas fa-disease"></i>grid-auto-rows</li>
+              <li><i class="fas fa-disease"></i>grid-auto-flow</li>
+              <li><i class="fas fa-disease"></i>grid</li>
+              <li><i class="fas fa-disease"></i>grid-row-start</li>
+              <li><i class="fas fa-disease"></i>grid-column-start</li>
+              <li><i class="fas fa-disease"></i>grid-row-end</li>
+              <li><i class="fas fa-disease"></i>grid-column-end</li>
+              <li><i class="fas fa-disease"></i>grid-row</li>
+              <li><i class="fas fa-disease"></i>grid-column</li>
+              <li><i class="fas fa-disease"></i>grid-area</li>
+              <li><i class="fas fa-disease"></i>row-gap</li>
+              <li><i class="fas fa-disease"></i>column-gap</li>
+              <li><i class="fas fa-disease"></i>gap</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End grilles -->
+  <p class="copyright">Made With <i class="fas fa-heart"></i> By marouane mahboub</p>
+</body>
+
+</html>
