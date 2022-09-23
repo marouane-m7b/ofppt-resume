@@ -302,7 +302,9 @@ code.language-html .attr-value {
   margin: auto;
   text-align: center;
 }
-
+.container a {
+  color: var(--main-color-css);
+}
 a.links {
   color: var(--main-color-css-alt);
 }
