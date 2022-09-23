@@ -371,6 +371,7 @@ a.links {
     padding: 10px;
     font-size: 14px;
     height: 40px;
+    text-align: center;
   }
 }
 .header .main-nav > li > a::before {
