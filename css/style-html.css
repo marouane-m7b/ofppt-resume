@@ -291,9 +291,7 @@ code.language-html .attr-value {
   margin: auto;
   text-align: center;
 }
-.container a {
-  color: var(--main-color-html);
-}
+
 a.links {
   color: var(--main-color-html-alt);
 }
@@ -371,7 +369,6 @@ a.links {
     padding: 10px;
     font-size: 14px;
     height: 40px;
-    text-align: center;
   }
 }
 .header .main-nav > li > a::before {
