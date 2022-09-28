@@ -710,6 +710,32 @@ a.links {
 .selec-pseu table.pseudo td.desc-el {
   color: #777;
 }
+input#fcs:focus {
+  outline-color: var(--main-color-css);
+  background-color: #e9e6e6;
+}
+a.link-link:link {
+  color: gray !important;
+}
+a.visited-link:visited {
+  color: rgb(0, 203, 0);
+  text-decoration: underline;
+}
+a.hover-link {
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+a.hover-link:hover {
+  color: rgb(255, 58, 18);
+  text-decoration: underline;
+}
+a.active-link:active {
+  color: rgb(255, 58, 18);
+  text-decoration: underline;
+}
 /* End Select-Pseu */
 /* Start Css Box */
 .css-box {
@@ -1788,4 +1814,7 @@ path {
   bottom: -25px;
   left: -8px;
   background-color: #000;
+}
+a {
+  color: var(--main-color-css);
 }
